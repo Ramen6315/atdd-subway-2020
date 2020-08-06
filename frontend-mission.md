@@ -109,7 +109,7 @@ const validator = {
 
 ### 3. 현재 시간을 보여주는 `getCurrentTime` 메서드 구현
 
-- [ ]  현재시간을 아래 format처럼 보이도록,  `frontend/src/views/path/pathPage.vue` 의 208line에 있는 `getCurrentTime`을 구현합니다.
+- [x]  현재시간을 아래 format처럼 보이도록,  `frontend/src/views/path/pathPage.vue` 의 208line에 있는 `getCurrentTime`을 구현합니다.
 
 <img width="400" src="https://techcourse-storage.s3.ap-northeast-2.amazonaws.com/e656d0d51639446f93cd3af7222492dd">
 
