@@ -13,6 +13,7 @@ import wooteco.subway.maps.station.application.StationService;
 import wooteco.subway.maps.station.domain.Station;
 import wooteco.subway.common.TestObjectUtils;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -97,6 +98,17 @@ public class MapServiceTest {
         MapResponse mapResponse = mapService.findMap();
 
         assertThat(mapResponse.getLineResponses()).hasSize(3);
+    }
+    
+    @DisplayName("이동거리가 10km 미만일 경우 운임료가 1250원이다.")
+    @Test
+    void underTenKilloMeterFare() {
+        when(lineService.findLines()).thenReturn(lines);
+        when(pathService.findPath(anyList(), anyLong(), anyLong(), any())).thenReturn(subwayPath);
+        when(stationService.findStationsByIds(anyList())).thenReturn(stations);
 
+        PathResponse pathResponse = mapService.findPath(1L, 3L, PathType.DISTANCE);
+
+        assertThat(pathResponse.getFare()).isEqualTo(1250);
     }
 }
