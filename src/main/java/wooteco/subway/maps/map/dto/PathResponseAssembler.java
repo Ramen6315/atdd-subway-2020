@@ -16,6 +16,12 @@ public class PathResponseAssembler {
 
         int distance = subwayPath.calculateDistance();
 
-        return new PathResponse(stationResponses, subwayPath.calculateDuration(), distance);
+        return new PathResponse(stationResponses, subwayPath.calculateDuration(), distance, calculateOverFare(distance));
+    }
+    private static int calculateOverFare(int distance) {
+        if (distance == 0) {
+            return 0;
+        }
+        return (int) ((Math.ceil((distance - 1) / 5) + 1) * 100);
     }
 }
