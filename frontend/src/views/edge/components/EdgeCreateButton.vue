@@ -168,7 +168,7 @@ export default {
         preStationId: '',
         stationId: '',
         distance: '',
-        duration: ''
+        duration: '',
       }
     }
   },
