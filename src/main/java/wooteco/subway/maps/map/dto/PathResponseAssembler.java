@@ -22,6 +22,6 @@ public class PathResponseAssembler {
         if (distance == 0) {
             return 0;
         }
-        return (int) ((Math.ceil((distance - 1) / 5) + 1) * 100);
+        return (int) ((Math.ceil((distance - 1) / 1) + 1) * 100);
     }
 }

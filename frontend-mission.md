@@ -21,9 +21,9 @@ npm start
 
 ## 🎯 요구사항
 
-- [ ]  1. 백엔드 요금 조회 api를 프론트엔드에서 사용할 수 있게 연동
+- [x]  1. 백엔드 요금 조회 api를 프론트엔드에서 사용할 수 있게 연동
 - [ ]  2. [템플릿 리터럴](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Template_literals)을 이용해 현재 시간을 사용자가 보기 편한 형식으로 문자열 렌더링
-- [ ]  3. validator를 구현해, form의 유효성을 검사
+- [x]  3. validator를 구현해, form의 유효성을 검사
 - [ ]  4. 길찾기를 위해 사용자가 입력한 값을 이용해 검색결과를 불러오는 핸들러를 구현
 
 <br/>
@@ -34,7 +34,7 @@ npm start
 
 백엔드에서 추가로 구현하는 요금조회의 api를 직접 프론트엔드에 연동해야 합니다.
 
-- [ ]  `frontend/src/api/modules/path.js` 에 백엔드에서 구현한 path 검색 api의 endpoint를 추가합니다.
+- [x]  `frontend/src/api/modules/path.js` 에 백엔드에서 구현한 path 검색 api의 endpoint를 추가합니다.
 
 ```js
 const PathService = {
@@ -45,7 +45,7 @@ const PathService = {
 ```
 
 - 위 apiService를 사용하는 곳은 `frontend/src/store/modules/path.js` 입니다.
-- [ ]  여러분이 api를 추가하고, 함께 업데이트 할 부분은 `actions`의 `PathService.get()` 부분의 파라미터입니다. 
+- [x]  여러분이 api를 추가하고, 함께 업데이트 할 부분은 `actions`의 `PathService.get()` 부분의 파라미터입니다. 
 
 ```js
 const actions = {
