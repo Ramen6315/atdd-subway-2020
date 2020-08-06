@@ -1,7 +1,6 @@
 package wooteco.subway.maps.map.documentation;
 
 import static io.restassured.module.mockmvc.RestAssuredMockMvc.*;
-import static org.mockito.ArgumentMatchers.*;
 import static org.mockito.Mockito.when;
 import static org.springframework.restdocs.headers.HeaderDocumentation.*;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.*;
@@ -73,19 +72,19 @@ public class PathDocumentation extends Documentation {
                                 headerWithName("Authorization").description("Bearer auth credentials")),
                         responseFields(
                                 fieldWithPath("lineResponses[].id").type(JsonFieldType.NUMBER).description("id"),
-                                fieldWithPath("lineResponses[].name").type(JsonFieldType.STRING).description("name"),
-                                fieldWithPath("lineResponses[].color").type(JsonFieldType.STRING).description("name"),
-                                fieldWithPath("lineResponses[].startTime").type(JsonFieldType.STRING).description("name"),
-                                fieldWithPath("lineResponses[].endTime").type(JsonFieldType.STRING).description("name"),
-                                fieldWithPath("lineResponses[].intervalTime").type(JsonFieldType.NUMBER).description("name"),
-                                fieldWithPath("lineResponses[].stations[].station.id").type(JsonFieldType.NUMBER).description("name"),
-                                fieldWithPath("lineResponses[].stations[].station.name").type(JsonFieldType.STRING).description("name"),
-                                fieldWithPath("lineResponses[].stations[].preStationId").type(JsonFieldType.NUMBER).description("name"),
-                                fieldWithPath("lineResponses[].stations[].lineId").type(JsonFieldType.NUMBER).description("name"),
-                                fieldWithPath("lineResponses[].stations[].distance").type(JsonFieldType.NUMBER).description("name"),
-                                fieldWithPath("lineResponses[].stations[].duration").type(JsonFieldType.NUMBER).description("name"),
-                                fieldWithPath("lineResponses[].createdDate").type(JsonFieldType.STRING).description("name"),
-                                fieldWithPath("lineResponses[].modifiedDate").type(JsonFieldType.STRING).description("name")
+                                fieldWithPath("lineResponses[].name").type(JsonFieldType.STRING).description("lineResponse name"),
+                                fieldWithPath("lineResponses[].color").type(JsonFieldType.STRING).description("lineResponse color"),
+                                fieldWithPath("lineResponses[].startTime").type(JsonFieldType.STRING).description("lineResponse startTime"),
+                                fieldWithPath("lineResponses[].endTime").type(JsonFieldType.STRING).description("lineResponse endTime"),
+                                fieldWithPath("lineResponses[].intervalTime").type(JsonFieldType.NUMBER).description("lineResponse intervalTime"),
+                                fieldWithPath("lineResponses[].stations[].station.id").type(JsonFieldType.NUMBER).description("lineResponse stations stations id"),
+                                fieldWithPath("lineResponses[].stations[].station.name").type(JsonFieldType.STRING).description("lineResponse stations stations name"),
+                                fieldWithPath("lineResponses[].stations[].preStationId").type(JsonFieldType.NUMBER).description("lineResponse stations stations preStationId"),
+                                fieldWithPath("lineResponses[].stations[].lineId").type(JsonFieldType.NUMBER).description("lineResponse stations lineId"),
+                                fieldWithPath("lineResponses[].stations[].distance").type(JsonFieldType.NUMBER).description("lineResponse stations distance"),
+                                fieldWithPath("lineResponses[].stations[].duration").type(JsonFieldType.NUMBER).description("lineResponse stations duration"),
+                                fieldWithPath("lineResponses[].createdDate").type(JsonFieldType.STRING).description("lineResponse createDate"),
+                                fieldWithPath("lineResponses[].modifiedDate").type(JsonFieldType.STRING).description("lineResponse modifiedDate")
                                 ))).
                 extract();
     }
@@ -111,11 +110,11 @@ public class PathDocumentation extends Documentation {
                         requestHeaders(
                                 headerWithName("Authorization").description("Bearer auth credentials")),
                         responseFields(
-                                fieldWithPath("stations[].id").type(JsonFieldType.NUMBER).description("stationsId"),
-                                fieldWithPath("stations[].name").type(JsonFieldType.STRING).description("stationsName"),
-                                fieldWithPath("duration").type(JsonFieldType.NUMBER).description("duration"),
-                                fieldWithPath("distance").type(JsonFieldType.NUMBER).description("source"),
-                                fieldWithPath("fare").type(JsonFieldType.NUMBER).description("fare")
+                                fieldWithPath("stations[].id").type(JsonFieldType.NUMBER).description("지하철역들의 id"),
+                                fieldWithPath("stations[].name").type(JsonFieldType.STRING).description("지하철역들의 이름"),
+                                fieldWithPath("duration").type(JsonFieldType.NUMBER).description("이동 시간"),
+                                fieldWithPath("distance").type(JsonFieldType.NUMBER).description("이동 거리"),
+                                fieldWithPath("fare").type(JsonFieldType.NUMBER).description("요금")
                         ))).
                 extract();
     }
